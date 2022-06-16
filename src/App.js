@@ -1,12 +1,12 @@
 import React from 'react';
 import {SafeAreaView} from 'react-native';
 import styled from 'styled-components';
-import Counter from './components/Counter';
+import TodoApp from './components/TodoApp/TodoApp';
 
 const App = () => {
   return (
     <MainView>
-      <Counter />
+      <TodoApp />
     </MainView>
   );
 };
@@ -15,5 +15,4 @@ export default App;
 
 const MainView = styled(SafeAreaView)`
   flex: 1;
-  background-color: cyan;
 `;
