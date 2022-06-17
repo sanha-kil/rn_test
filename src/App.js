@@ -1,6 +1,5 @@
 import React from 'react';
-import {SafeAreaView} from 'react-native';
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 import TodoApp from './components/TodoApp/TodoApp';
 
 const App = () => {
@@ -13,6 +12,6 @@ const App = () => {
 
 export default App;
 
-const MainView = styled(SafeAreaView)`
+const MainView = styled.SafeAreaView`
   flex: 1;
 `;

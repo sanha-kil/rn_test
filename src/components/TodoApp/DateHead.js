@@ -1,6 +1,6 @@
 import React from 'react';
-import {StatusBar, Text, View} from 'react-native';
-import styled from 'styled-components';
+import {StatusBar} from 'react-native';
+import styled from 'styled-components/native';
 
 function DateHead({date}) {
   const year = date.getFullYear();
@@ -20,12 +20,12 @@ function DateHead({date}) {
 
 export default DateHead;
 
-const DateContainer = styled(View)`
+const DateContainer = styled.View`
   padding: 16px;
   background-color: #26a69a;
 `;
 
-const DateText = styled(Text)`
+const DateText = styled.Text`
   font-size: 24px;
   color: white;
 `;
