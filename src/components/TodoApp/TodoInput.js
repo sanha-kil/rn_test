@@ -2,18 +2,19 @@ import React, {useState} from 'react';
 import {Image, Keyboard, TouchableOpacity} from 'react-native';
 import styled from 'styled-components/native';
 
-function AddTodo() {
+function TodoInput({addTodo}) {
   const [input, setInput] = useState('');
   console.log(input);
 
   const addTodoList = () => {
     setInput('');
+    addTodo(input);
     Keyboard.dismiss();
   };
 
   return (
     <AddBlock>
-      <TodoInput
+      <NewTodoInput
         placeholder="할 일을 입력해주세요"
         value={input}
         onChangeText={setInput}
@@ -29,7 +30,7 @@ function AddTodo() {
   );
 }
 
-export default AddTodo;
+export default TodoInput;
 
 const AddBlock = styled.View`
   display: flex;
@@ -41,7 +42,7 @@ const AddBlock = styled.View`
   border-bottom-width: 0.7px;
 `;
 
-const TodoInput = styled.TextInput`
+const NewTodoInput = styled.TextInput`
   flex: 1;
   font-size: 16px;
   padding: 16px 0;
